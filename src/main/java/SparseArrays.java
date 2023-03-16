@@ -9,7 +9,7 @@ import static java.util.stream.Collectors.toList;
 public class SparseArrays {
     public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
 
-        int found = 0;
+        int found;
 
         List<Integer> result = new ArrayList<>();
 
@@ -46,8 +46,11 @@ public class SparseArrays {
 //        System.out.println(num);
 
 
+        String outputPath = "S:/Java/output.txt"; // replace "output.txt" with your desired file name
+        System.setProperty("OUTPUT_PATH", outputPath);
+
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputPath));
 
         int stringsCount = Integer.parseInt(bufferedReader.readLine().trim());
 
